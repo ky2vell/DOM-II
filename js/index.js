@@ -78,7 +78,6 @@ busImage.addEventListener('animationstart', () => {
 
 busImage.addEventListener('animationend', () => {
     busImage.style.display = 'none';
-    busButton.style.marginTop = '60px';
     busButton.textContent = 'Bus Gone';
 });
 
@@ -127,3 +126,17 @@ function shake() {
 function shakeRemove() {
     busButton.classList.remove('shake');
 }
+
+// GREENSOCK
+
+const tl = gsap.timeline({ defaults: { duration: 1, ease: "elastic" } })
+
+tl.from('.sock1', { x: -400, stagger: .6, opacity: 0 })
+    .from('.sock2', { x: 400, stagger: .6, opacity: 0, rotation: -270 })
+    .from('.sock3', { x: -400, stagger: .6, opacity: 0 })
+    .from('.sock4', { x: 400, stagger: .6, opacity: 0 })
+    .from('.sock5', { x: -400, stagger: .6, opacity: 0 })
+    .from('.sock6', { x: 400, stagger: .6, opacity: 0 })
+    .from('.sock7', { x: -400, stagger: .6, opacity: 0 })
+    .from('.sock8', { x: 400, stagger: .6, opacity: 0 })
+    .from('.sock9', { x: -400, stagger: .6, opacity: 0 });
